@@ -33,6 +33,7 @@ Site statique (HTML, CSS, un peu de JavaScript), sans outil de construction : ch
      `<li>Le <a href="TDPRO/td10-martingales.pdf">TD10</a>&nbsp;: martingales.</li>`.
    - Colle : dans `enseignement.html`, ajouter une ligne dans la liste `window.COLLES` (en bas de la page), dans la bonne classe :
      `{ file: "mpsi/colle-31-mpsi3-....pdf", name: "Titre affiché" },`.
+     Pour une correction, ajouter `cor: "mpsi/....pdf"` : un lien « correction » s'affiche à côté du sujet.
      Les onglets et le compteur se mettent à jour tout seuls.
    - Développement ou plan sur la page Agrégation : copier un bloc `<li class="dev" ...>` ; les numéros de leçons vont dans
      `data-lecons="223 230"` (utilisé par le filtre) et dans la ligne `<p class="tags">`.

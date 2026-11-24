@@ -55,6 +55,14 @@
         a.href = s.file; a.target = '_blank'; a.rel = 'noopener';
         a.textContent = s.name;
         li.appendChild(a);
+        if (s.cor) {
+          var c = document.createElement('a');
+          c.className = 'cor';
+          c.href = s.cor; c.target = '_blank'; c.rel = 'noopener';
+          c.textContent = 'correction';
+          c.setAttribute('aria-label', 'Éléments de correction : ' + s.name);
+          li.appendChild(c);
+        }
         ul.appendChild(li);
       });
       panel.appendChild(ul);
