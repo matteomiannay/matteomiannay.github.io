@@ -272,4 +272,14 @@
       else fallback();
     });
   });
+  /* 6. Date de mise à jour : date du dernier envoi sur le serveur (en-tête Last-Modified).
+        Si le serveur ne la donne pas, le texte écrit dans la page reste affiché. */
+  var lm = new Date(document.lastModified);
+  if (!isNaN(lm) && Math.abs(Date.now() - lm.getTime()) > 60000) {
+    document.querySelectorAll('[data-updated]').forEach(function (el) {
+      var en = el.getAttribute('data-updated') === 'en';
+      var d = lm.toLocaleDateString(en ? 'en-GB' : 'fr-FR', { month: 'long', year: 'numeric' });
+      el.textContent = en ? 'Last updated ' + d : 'Mis à jour en ' + d;
+    });
+  }
 })();

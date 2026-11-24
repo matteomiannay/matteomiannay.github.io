@@ -304,3 +304,6 @@ a.dev-title:hover, .dev-title a:hover { text-decoration-color: var(--accent); }
 /* lien d'évitement (accessibilité clavier) */
 .skip { position: absolute; left: -9999px; top: 8px; z-index: 50; padding: 10px 16px; border-radius: 8px; background: var(--accent); color: #fff; }
 .skip:focus { left: 8px; }
+
+/* Un élément marqué hidden reste masqué même si sa classe fixe un display */
+[hidden] { display: none !important; }
